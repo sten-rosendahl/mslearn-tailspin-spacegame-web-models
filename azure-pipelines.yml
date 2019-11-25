@@ -16,6 +16,8 @@ steps:
   inputs:
     command: 'restore'
     projects: '**/*.csproj'
+    feedsToUse: 'select'
+    vstsFeed: '4dc9b01f-f058-46ac-bda3-0e7fb685d254/b09fd9ab-66b0-448d-be17-146dfbec2822'
 
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
@@ -39,6 +41,6 @@ steps:
   displayName: 'Publish NuGet package'
   inputs:
     command: push
-    publishVstsFeed: 'Tailspin.SpaceGame.Web.Models'
+    publishVstsFeed: '4dc9b01f-f058-46ac-bda3-0e7fb685d254/b09fd9ab-66b0-448d-be17-146dfbec2822'
     allowPackageConflicts: true
   condition: succeeded()
