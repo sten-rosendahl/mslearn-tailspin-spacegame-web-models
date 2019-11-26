@@ -40,9 +40,10 @@ steps:
   inputs:
     command: push
     #feedsToUse: 'select'
-    #publishVstsFeed: 'Tailspin.SpaceGame.Web.Models'
-    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
-    nuGetFeedType: 'internal'
-    publishVstsFeed: '4dc9b01f-f058-46ac-bda3-0e7fb685d254/b09fd9ab-66b0-448d-be17-146dfbec2822'
+    publishVstsFeed: 'Tailspin.SpaceGame.Web.Models'
+    allowPackageConflicts: true
+    #packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    #nuGetFeedType: 'internal'
+    #publishVstsFeed: '4dc9b01f-f058-46ac-bda3-0e7fb685d254/b09fd9ab-66b0-448d-be17-146dfbec2822'
   condition: succeeded()
     
