@@ -45,6 +45,7 @@ steps:
   displayName: 'Publish NuGet package'
   inputs:
     command: push
-    publishVstsFeed: 'Tailspin.SpaceGame.Web.Models2'
+    VstsFeed: 'https://stenrosendahl0473.pkgs.visualstudio.com/f86a92c8-b759-4046-b039-95cba2c342f4/_packaging/Tailspin.SpaceGame.Web.Models2/nuget/v3/index.json'
+    publishVstsFeed: 'https://stenrosendahl0473.pkgs.visualstudio.com/f86a92c8-b759-4046-b039-95cba2c342f4/_packaging/Tailspin.SpaceGame.Web.Models2/nuget/v3/index.json'
     allowPackageConflicts: true
   condition: succeeded()
